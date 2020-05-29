@@ -1,0 +1,11 @@
+.quiz_link{
+    color: #000;
+}
+
+.quiz_link:hover{
+    color:#f00;
+}
+
+.linkbar{
+    margin-top: 2em;
+}

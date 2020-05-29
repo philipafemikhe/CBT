@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xlns:th="http://www.thymeleaf.org" xmlns:xlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <link href="css/bootstrap.min.css" rel="stylesheet"/>
+    <title>Question Bank</title>
+</head>
+<body>
+    <div th:replace="~{fragments/header :: header}">Header</div>
+    <div class="container" align="center">
+        <div class="col-md-12">
+            <h1>Api Response - Thymeleaf</h1>
+            <table class="table striped" cellpadding="10" cellspacing="5" border="1">
+                <thead>
+                <th>Question</th>
+                <th>Option1</th>
+                <th>Option2</th>
+                <th>Option3</th>
+                <th>Option4</th>
+                <th>Option5</th>
+                <th>Marks</th>
+                <th>Course</th>
+                </thead>
+                <tr th:each="question : ${questions}">
+                    <td th:text="${question.question}">Question</td>
+                    <td th:text="${question.option1}">Option1 </td>
+                    <td th:text="${question.option2}">Option2 ...</td>
+                    <td th:text="${question.option3}">Option3 ...</td>
+                    <td th:text="${question.option4}">Option4 ...</td>
+                    <td th:text="${question.option5}">Option5 ...</td>
+                    <td th:text="${question.marks}">Marks ...</td>
+                    <td th:text="${question.courseId}">Course ...</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <div th:insert="~{fragments/footer :: footer}">&copy; 2020 QuizMarker</div>
+</body>
+</html>

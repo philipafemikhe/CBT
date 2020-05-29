@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="css/quizmarker.css" rel="stylesheet"/>
+    <title>Jofem Quizmarker</title>
+</head>
+<body>
+    <section>
+        <div class="container">
+            <div class="row" align="center">
+                <h1>Welcome to QuizMarker</h1>
+                <!--<img src="images/family.png" class="img-responsive" width="20%" height="auto">-->
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="row linkbar">
+                        <a href="list_courses" class="quiz_link">Click here to view available courses </a>
+                    </div>
+                    <div class="row linkbar">
+                        <a href="/api/users" class="quiz_link">Request data from Remote end </a>
+                    </div>
+                    <div class="row linkbar">
+                        <a href="/api/user/1" class="quiz_link">Get subscription Account Detail </a>
+                    </div>
+                    <div class="row linkbar">
+                        <a href="/quiz/questions" class="quiz_link">View Quiz Questions </a>
+                    </div>
+                    <div class="row linkbar">
+                        <a href="/quiz/questions" class="quiz_link">Question bank </a>
+                    </div>
+                    <div class="row linkbar">
+                        <a href="/service/login" class="quiz_link">Login to Quiz </a>
+                    </div>
+                    <div class="row">
+                        <form method="post" action="/api/token">
+                            <div class="form-group">
+                                <input type="hidden" name="username" id="username" value="alade19@gmail.com">
+                                <input type="hidden" name="password" id="password" value="password">
+                            </div>
+                            <button style="background: none; border: none" type="submit">Obtain Quiz Token</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-md-6" style="margin: 0em 1em">
+                    <img src="images/family.png" class="img-responsive" width="80%" height="auto">
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+
+</body>
+</html>

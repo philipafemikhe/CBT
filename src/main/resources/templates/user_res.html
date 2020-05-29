@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xlns:th="http://www.thymeleaf.org" xmlns:xlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <link href="/css/bootstrap.min.css" rel="stylesheet"/>
+    <title>Contact List</title>
+</head>
+<body>
+    <div th:replace="~{fragments/header :: header}">Header</div>
+    <div class="container" align="center">
+        <div class="offset-col-md-2 col-md-8">
+            <h1>List of Registered Users</h1>
+            <table border="1" cellpadding="10" class="table table-striped">
+                <tr>
+                    <th>Firstname</th>
+                    <th>Lastname</th>
+                    <th>Email</th>
+                    <th>Phone no</th>
+                </tr>
+                <tr th:each="record : ${records}">
+                    <td th:text="${record.firstName}">Data</td>
+                    <td th:text="${record.lastName}">Data</td>
+                    <td th:text="${record.email}">Data</td>
+                    <td th:text="${record.phone}">Data</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <div th:insert="~{fragments/footer :: footer}">&copy; 2020 QuizMarker</div>
+</body>
+</html>

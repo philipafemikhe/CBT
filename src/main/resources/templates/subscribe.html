@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html xlns:th="http://www.thymeleaf.org" xmlns:xlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Subscribe to Quizmarker</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet"/>
+</head>
+<body>
+<div class="container">
+    <form action="#" th:action="@{/users/}" th:object="${user}" method="post">
+
+        <div class="form-group row">
+            <div class="col-md-8">
+                <label for="firstName">First name</label>
+                <input type="text" th:field="*{firstName}" name="firstName" id="firstName" class="form-control">
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <div class="col-md-8">
+                <label for="lastName">Last Name</label>
+                <input type="text" th:field="*{lastName}" name="lastName" id="lastName" class="form-control">
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <div class="col-md-8">
+                <label for="email">Email</label>
+                <input type="email" th:field="*{email}" name="email" id="email" class="form-control">
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <div class="col-md-8">
+                <label for="phone">Phone</label>
+                <input type="text" th:field="*{phone}" name="phone" id="phone" class="form-control">
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <div class="col-md-8">
+                <label for="userType">User Type</label>
+                <input type="text" th:field="*{userType}" name="userType" id="userType" class="form-control">
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <div class="col-md-8">
+                <label for="roles">Role</label>
+                <select th:field="*{roles}" name="roles" id="roles" class="form-control">
+                    <!--<option th:each="role : ${roles}" th:value="${role.role_id}" th:text="${role.role}">Role</option>-->
+                    <option th:each="role : ${roles}" th:value="${role.role_id}" th:text="${role.role}">Role</option>
+                    <!--<option th:each="role : ${roles}" th:value="*{role.role_id}" th:text="*{role.role}">Role</option>-->
+                </select>
+                <!--<select th:field="*{roles}" name="roles" id="roles" class="form-control">-->
+                    <!--<li value="0">Select one</li>-->
+                    <!--<li th:each="role : ${roles}" th:text="*{role.role}" th:value="*{role.role_id}"></li>-->
+                <!--</select>-->
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <div class="col-md-8">
+                <label for="password">Password</label>
+                <input type="password" th:field="*{password}" name="password" id="password" class="form-control">
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <div class="col-md-8">
+                <button type="submit">Submit</button>
+            </div>
+        </div>
+    </form>
+
+</div>
+
+</body>
+</html>

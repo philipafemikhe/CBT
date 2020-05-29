@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xlns:th="http://www.thymeleaf.org" xmlns:xlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <link href="css/bootstrap.min.css" rel="stylesheet"/>
+    <title>Contact List</title>
+</head>
+<body>
+    <div class="container" align="center">
+        <div class="offset-col-md-2 col-md-8">
+            <h1>Api Response - Thymeleaf</h1>
+            <table class="table striped" cellpadding="10" cellspacing="5">
+                <thead>
+                <th>Lastname</th>
+                <th>Firstname</th>
+                <th>email</th>
+                <th>Phone</th>
+                <th>Roles</th>
+                <th>Date Enrolled</th>
+                </thead>
+                <tr th:each="record : ${records}">
+                    <td th:text="${record.lastName}">Last name</td>
+                    <td th:text="${record.firstName}">First name </td>
+                    <td th:text="${record.email}">Email ...</td>
+                    <td th:text="${record.phone}">Phone ...</td>
+                    <td th:text="${record.roles}">Phone ...</td>
+                    <td th:text="${record.createdAt}">Phone ...</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
