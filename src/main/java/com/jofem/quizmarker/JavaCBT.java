@@ -9,10 +9,10 @@ import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 //@EnableWebMvc
 @EnableWebMvc
 @EnableWebSecurity
-public class QuizmarkerMVC {
+public class JavaCBT {
 
 	public static void main(String[] args) {
-		SpringApplication.run(QuizmarkerMVC.class, args);
+		SpringApplication.run(JavaCBT.class, args);
 	}
 
 }
